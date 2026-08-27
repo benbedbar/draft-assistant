@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.log
+
+# Raw data: keep the FantasyPros projection CSVs the app needs, ignore the rest
+data/raw/*
+!data/raw/fantasypros/
+data/processed/
+
+# Local tooling
+.claude/
