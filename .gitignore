@@ -12,3 +12,4 @@ data/processed/
 
 # Local tooling
 .claude/
+Claude_Code_Draft_Tool_Prompt.md.txt

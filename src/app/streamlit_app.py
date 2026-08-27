@@ -26,7 +26,9 @@ st.set_page_config(page_title="Draft Assistant", layout="wide")
 TEAM_SLOTS = list(range(1, NUM_TEAMS + 1))
 PICK_ORDER = snake_order(NUM_TEAMS, ROSTER_SIZE)
 
-TEAM_NAMES = {1: "Micheal", 2: "Claire", 4: "Teresa", 6: "Samuel", 7: "Jordan", 9: "Patrick"}
+# Optional friendly labels for known managers, keyed by pick slot; any slot not
+# listed just shows "Team N". Left generic so the app can be shared across leagues.
+TEAM_NAMES = {}
 
 
 def team_label(slot):
