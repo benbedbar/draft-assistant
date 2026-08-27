@@ -5,6 +5,7 @@ and eventual Streamlit app to consume.
 
 import json
 import time
+from pathlib import Path
 
 import numpy as np
 
@@ -43,6 +44,7 @@ output = {
     "summary": summary,
     "raw": {p: {"vs_league_avg": r[0].tolist(), "vs_single_opponent": r[1].tolist()} for p, r in results.items()},
 }
+Path("data/processed").mkdir(parents=True, exist_ok=True)
 with open("data/processed/monte_carlo_results.json", "w") as f:
     json.dump(output, f)
 

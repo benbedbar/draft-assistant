@@ -11,6 +11,7 @@ Saves data/processed/monte_carlo_by_slot.json for later reference.
 
 import json
 import time
+from pathlib import Path
 
 import numpy as np
 
@@ -59,6 +60,7 @@ for slot in slots:
             flush=True,
         )
 
+Path("data/processed").mkdir(parents=True, exist_ok=True)
 with open("data/processed/monte_carlo_by_slot.json", "w") as f:
     json.dump({"num_simulations": NUM_SIMULATIONS, "metric": METRIC, "results":
               {str(s): v for s, v in results.items()}}, f)

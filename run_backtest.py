@@ -6,6 +6,7 @@ Saves results for the Part 5-vs-Part-6 comparison table.
 
 import json
 import time
+from pathlib import Path
 
 import numpy as np
 
@@ -35,6 +36,7 @@ output = {
         for policy, s in summary.items()
     },
 }
+Path("data/processed").mkdir(parents=True, exist_ok=True)
 with open("data/processed/backtest_results.json", "w") as f:
     json.dump(output, f)
 

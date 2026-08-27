@@ -86,8 +86,8 @@ with st.sidebar:
         "My pick slot", min_value=1, max_value=NUM_TEAMS, key="my_pick_slot",
         help="Update this as soon as the draft order is set — everything below re-labels automatically.",
     )
-    policy_name = st.selectbox("Strategy", POLICIES, index=POLICIES.index("Hero RB"))
-    st.caption("Hero RB won both the Monte Carlo simulation and the 5-season historical backtest for this league.")
+    policy_name = st.selectbox("Strategy", POLICIES, index=POLICIES.index("Zero RB"))
+    st.caption("Zero RB had the highest simulated win rate at every draft slot (10-team half-PPR, 1-FLEX). Hero RB was a close second.")
     st.divider()
     st.metric("Overall picks made", len(st.session_state.drafted))
     st.metric("My picks made", len(team_players(st.session_state.my_pick_slot)))
